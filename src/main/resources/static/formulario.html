@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Jeremy Robles  -->
+<html>
+    <head lang="es">
+        <title>GoOnline</title>
+        <meta charset="UTF-8">
+        <link href="scc/style.css" rel="stylesheet" type="text/css"/>
+        <!-- 
+        <style>
+            h1 {
+                background-color:  lightgreen;
+                color:  black;
+            }
+            p{
+                color:   azure; 
+                background-color: aqua;
+            }
+        </style>
+        -->
+    </head>
+    <body>
+
+        <header class="header">
+            <nav class="nav">
+                <a href="index_2.html" class="logo nav_link">GoOnline</a>
+                <ul class="nav_menu">
+                    <li class="nav_menu_item"> <a class="nav_menu_link nav_link" href="ejemplo5.html ">&LeftTriangleBar;</a></li>
+                    <li class="nav_menu_item"> <a class="nav_menu_link nav_link" href="ejemplo1.html">&RightTriangleBar;</a></li>
+                    <li class="nav_menu_item"> <a class="nav_menu_link nav_link" href="audio.html">Audio</a> </li>
+                    <li class="nav_menu_item"> <a class="nav_menu_link nav_link" href="video.html">Video</a> </li>
+                    <li class="nav_menu_item"> <a class="nav_menu_link nav_link" href="iframe.html">Iframe </a> </li>
+                    <li class="nav_menu_item"> <a class="nav_menu_link nav_link" href="formulario.html">Formulario </a> </li>
+                    <li class="nav_menu_item"></li>
+                </ul>
+
+            </nav>
+        </header >
+
+        <aside class="aside">
+            <h2>Noticias y ofertas</h2>
+            <p>PlayStation 5, Solo 6 unidades disponibles</p>
+            <p>Apple AirPods, 10% de decuento</p>
+        </aside>  
+
+        <section class="contenido">
+            <h2>Formulario</h2>
+            <article>
+                <header>
+                    <h3>Registro de Clientes</h3>
+                </header>
+                <form action="Cliente/Rgistro" method="post">
+                    <fieldset>
+                        <legend>Datos del Clientes</legend>
+
+                        <label for="name">Nombre:</label>
+                        <input type="text" name="Nombre" id="name"/>
+                        <br>
+                        <br>
+
+                        <label for="clave">Clave:</label>
+                        <input type="password" name="Clave" id="clave"/>
+                        <br>
+                        <br>
+
+                        <label for="direccion">Direccion</label>
+                        <br>
+                        <textarea name="Direccion" rows="2" cols="20" id="direccion"></textarea>
+                        <br>
+                        <br>
+
+                        <label for="edad">Edad:</label>
+                        <input type="number" name="edad" id="edad" max="100" min="18" />
+                        <br>
+                        <br>
+
+                        <label for="correo">Correo:</label>
+                        <input type="email" name="Correo" id="correo"  />
+
+                        <br>
+                        <br>
+                        <input type="button" value="Registrar">
+
+
+                    </fieldset>
+                </form>
+
+
+
+
+            </article>
+
+        </section>
+
+        <footer class="footer">
+            <p>Todos los derechos reservados &COPY; 2023 | GoOnline</p>  
+        </footer>
+
+    </body>
+</html>

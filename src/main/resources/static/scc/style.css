@@ -19,6 +19,41 @@ body{
     right: 0;
     left: 0;
 }
+.nav {
+    display:  flex;
+    justify-content:  space-between;
+    max-height: 992px;
+    margin: 0 auto;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+.nav_link{
+    color: white;
+    text-decoration: none;
+}
+.nav_menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.nav_menu_item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    width: max-content;
+}
+.nav_menu_link{
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+.nav_menu_link:hover{
+    background-color:  lightblue;
+    transition: 0.5s;
+}
 .aside{
     background-color:  antiquewhite;
     position: fixed;
@@ -41,8 +76,32 @@ body{
     height: 20xp;
     position: fixed;
     width: 100%;
-    bottom: 0; 
+    bottom: 0;
+}
+h2{
+    color:  black;
+}
+
+h3{
+    color:   lightslategrey;
 }
 nav a{
     color:  azure;
+}
+
+.texto_centrado{
+    text-align:  center;
+}
+.texto_derecho{
+    text-align:  right;
+}
+
+tbody tr:nth-child(odd){
+    background-color:   aquamarine;
+}
+tr:nth-child(even){
+    background-color:   lightcoral;
+}
+.article{
+ margin-bottom: 35px;   
 }
