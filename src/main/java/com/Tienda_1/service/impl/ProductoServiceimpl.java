@@ -13,22 +13,24 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ProductoServiceimpl implements ProductoService{
+
+
+public class ProductoServiceimpl implements ProductoService {
 
     @Autowired
     private ProductoDao productoDao;
-    
+
     @Override
     public List<Producto> getProductos(boolean activos) {
         var lista = productoDao.findAll();
-        
+
         if (activos) {
             lista.removeIf(e -> !e.isActivo());
         }
-        
+
         return lista;
     }
-    
+
     @Override
     @Transactional(readOnly = true)
     public Producto getProducto(Producto producto) {
@@ -46,6 +48,23 @@ public class ProductoServiceimpl implements ProductoService{
     public void delete(Producto producto) {
         productoDao.delete(producto);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> getByPrecio(double precioInf, double precioSup) {
+        return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> consultaJPQL(double precioInf, double precioSup) {
+        return productoDao.consultaJPQL(precioInf, precioSup);
+    }
+
+    @Override
+    @Transactional(readOnly=true)    
+    public List<Producto> consultaNativo(double precioInf, double precioSup) {
+        return productoDao.consultaNativo(precioInf, precioSup);
+    }
     
 }
-
