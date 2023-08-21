@@ -43,6 +43,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     <li><a class="dropdown-item" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
                                     <li><a class="dropdown-item"  th:href="@{/pruebas/listado}">[[#{plantilla.asociaciones}]]</a></li>
                                     <li><a class="dropdown-item"  th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a></li>
+                                    <li><a class="dropdown-item"  th:href="@{/reportes/principal}">[[#{plantilla.reportes}]]</a></li>
+
                                 </ul>
                             </li>
                         </ul>
@@ -67,17 +69,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <li class="nav-item my-auto text-white">
                                 <img th:src="@{/${session.usuarioImagen}}"" alt="Imagen del usuario" height="40" class="rounded-circle"/> 
                             </li>
-                            
+
                             <li class="nav-item my-auto ">
                                 <form  method="post" th:action="@{/logout}">
                                     <button class="btn btn-dark">
-                                         <i class="fa fa-sign-out-alt"></i>
+                                        <i class="fa fa-sign-out-alt"></i>
                                     </button>
-                                    
+
                                 </form>
                             </li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </nav>
